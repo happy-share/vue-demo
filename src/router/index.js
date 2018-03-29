@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import RequestDataTest from '@/pages/RequestDataTest'
 import demo001 from '@/pages/demo001'
+// import countdown from '@/pages/countdown'
+import timer from '@/pages/timer'
+import FlexDemo from '@/pages/FlexDemo'
 
 Vue.use(Router)
 
@@ -22,6 +25,16 @@ export default new Router({
       path: '/demo001',
       name: 'demo001',
       component: demo001
+    },
+    {
+      path: '/countdown',
+      name: 'countdown',
+      component: timer
+    },
+    {
+      path: '/flex',
+      name: 'FlexDemo',
+      component: FlexDemo
     }
   ]
 })
