@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+> https://picsum.photos/200/300
+
 ## Build Setup
 
 ``` bash
