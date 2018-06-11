@@ -1,17 +1,39 @@
 <template>
   <div>
     <debounce-search/>
-    <leaflet-map/>
+    <tool-countdown
+      :countdown="countdown"
+      :num-style="numStyle"
+      :symbol-style="symbolStyle"
+      v-on:runcount="countStart"
+      v-on:endcount="countEnd"
+    >
+    </tool-countdown>
   </div>
 </template>
 <script>
 import DebounceSearch from '@/components/DebounceSearch'
-import LeafletMap from '@/components/LeafletMap'
+import ToolCountdown from '@/components/tool-countdown'
 export default {
   name: 'index',
+  data () {
+    return {
+      countdown: 10,
+      numStyle: 'width: 48rpx; font-size: 28rpx; color: #ffffff; background: #000; text-align: center; border-radius: 8rpx; padding: 5rpx 0;',
+      symbolStyle: 'font-size: 28rpx; color: #000; padding: 0 12rpx;'
+    }
+  },
   components: {
     DebounceSearch,
-    LeafletMap
+    ToolCountdown
+  },
+  methods: {
+    countStart (e) {
+      console.log('======> 开始倒计时,', e)
+    },
+    countEnd () {
+      console.log('======> 倒计时结束')
+    }
   }
 }
 </script>
