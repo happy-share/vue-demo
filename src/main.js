@@ -4,8 +4,12 @@ import Vue from 'vue'
 import Element from 'element-ui'
 import App from './App'
 import router from './router'
+import VueHead from '@/plugin/vue-head'
+
 Vue.use(Element, { size: 'small' })
 Vue.config.productionTip = false
+
+Vue.use(VueHead)
 
 /* eslint-disable no-new */
 new Vue({

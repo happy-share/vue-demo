@@ -16,6 +16,9 @@ import DebounceSearch from '@/components/DebounceSearch'
 import ToolCountdown from '@/components/tool-countdown'
 export default {
   name: 'index',
+  head: {
+    title: 'hahhaha'
+  },
   data () {
     return {
       countdown: 10,
