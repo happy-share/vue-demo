@@ -9,6 +9,7 @@ import FlexDemo from '@/pages/FlexDemo'
 import index from '@/pages/index'
 import SimpleComponent from '@/components/SimpleComponent'
 import PageMap from '@/pages/page-map'
+import WiredElements from '@/pages/wired-elements'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/map',
       name: 'map',
       component: PageMap
+    },
+    {
+      path: '/wired-elements',
+      name: 'wired-elements',
+      component: WiredElements
     },
     {
       path: '/demo002',

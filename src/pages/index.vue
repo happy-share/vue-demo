@@ -1,5 +1,9 @@
 <template>
   <div>
+    <wired-button>Click Me</wired-button>
+    <wired-listbox>
+      <wired-item value="wired-elements" text="wired-elements" v-on:click="jump('/wired-elements')"></wired-item>
+    </wired-listbox>
     <debounce-search/>
     <tool-countdown
       :countdown="countdown"
@@ -14,6 +18,8 @@
 <script>
 import DebounceSearch from '@/components/DebounceSearch'
 import ToolCountdown from '@/components/tool-countdown'
+import('wired-elements')
+
 export default {
   name: 'index',
   head: {
@@ -36,6 +42,9 @@ export default {
     },
     countEnd () {
       console.log('======> 倒计时结束')
+    },
+    jump (url) {
+      this.$router.push(url)
     }
   }
 }
