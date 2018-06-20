@@ -8,6 +8,7 @@ import timer from '@/pages/timer'
 import FlexDemo from '@/pages/FlexDemo'
 import index from '@/pages/index'
 import SimpleComponent from '@/components/SimpleComponent'
+import PageMap from '@/pages/page-map'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: PageMap
     },
     {
       path: '/demo002',
