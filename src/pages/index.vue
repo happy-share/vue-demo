@@ -13,11 +13,15 @@
       v-on:endcount="countEnd"
     >
     </tool-countdown>
+    <test-list
+      :list="[1,2,3,4,5,6,7]"
+    ></test-list>
   </div>
 </template>
 <script>
 import DebounceSearch from '@/components/DebounceSearch'
 import ToolCountdown from '@/components/tool-countdown'
+import TestList from '@/components/test-list'
 import('wired-elements')
 
 export default {
@@ -34,7 +38,8 @@ export default {
   },
   components: {
     DebounceSearch,
-    ToolCountdown
+    ToolCountdown,
+    TestList
   },
   methods: {
     countStart (e) {
