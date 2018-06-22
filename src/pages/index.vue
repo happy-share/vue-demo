@@ -22,6 +22,8 @@
 import DebounceSearch from '@/components/DebounceSearch'
 import ToolCountdown from '@/components/tool-countdown'
 import TestList from '@/components/test-list'
+import * as utils from '@/utils'
+// import utils from '@/utils' // > utils undefined
 import('wired-elements')
 
 export default {
@@ -51,6 +53,9 @@ export default {
     jump (url) {
       this.$router.push(url)
     }
+  },
+  created () {
+    console.log(1, utils)
   }
 }
 </script>
