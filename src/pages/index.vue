@@ -1,8 +1,8 @@
 <template>
   <div>
     <wired-button>Click Me</wired-button>
-    <wired-listbox>
-      <wired-item value="wired-elements" text="wired-elements" v-on:click="jump('/wired-elements')"></wired-item>
+    <wired-listbox horizontal v-for="(item, index) in pages" :key="index">
+      <wired-item :value="item.name" :text="item.name" v-on:click="jump(item.path)"></wired-item>
     </wired-listbox>
     <h1 @click="handle">click</h1>
     <debounce-search/>
@@ -31,7 +31,7 @@ import('wired-elements')
 export default {
   name: 'index',
   head: {
-    title: 'hahhaha'
+    title: '😯'
   },
   data () {
     return {
@@ -39,6 +39,11 @@ export default {
       numStyle: 'width: 48rpx; font-size: 28rpx; color: #ffffff; background: #000; text-align: center; border-radius: 8rpx; padding: 5rpx 0;',
       symbolStyle: 'font-size: 28rpx; color: #000; padding: 0 12rpx;',
       list: [1, 2, 3, 4, 5, 6, 7]
+    }
+  },
+  computed: {
+    pages () {
+      return this.$router.options.routes
     }
   },
   components: {

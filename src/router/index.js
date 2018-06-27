@@ -10,6 +10,7 @@ import index from '@/pages/index'
 import SimpleComponent from '@/components/SimpleComponent'
 import PageMap from '@/pages/page-map'
 import WiredElements from '@/pages/wired-elements'
+import GithubTrending from '@/pages/github-trending'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/wired-elements',
       name: 'wired-elements',
       component: WiredElements
+    },
+    {
+      path: '/github-trending',
+      name: 'GithubTrending',
+      component: GithubTrending
     },
     {
       path: '/demo002',
