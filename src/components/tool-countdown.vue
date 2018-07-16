@@ -68,6 +68,7 @@ export default {
       let computeTimeMs = this.endTimeMs - now
       // countdown interval
       let timeout = computeTimeMs % 1000 || 0
+      console.log(computeTimeMs, timeout)
 
       this._timer = setTimeout(() => {
         this.initCountdown()

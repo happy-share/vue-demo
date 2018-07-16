@@ -9,6 +9,7 @@ import FlexDemo from '@/pages/FlexDemo'
 import index from '@/pages/index'
 import SimpleComponent from '@/components/SimpleComponent'
 import PageMap from '@/pages/page-map'
+import PageAmap from '@/pages/page-amap'
 import WiredElements from '@/pages/wired-elements'
 import GithubTrending from '@/pages/github-trending'
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/map',
       name: 'map',
       component: PageMap
+    },
+    {
+      path: '/amap',
+      name: 'amap',
+      component: PageAmap
     },
     {
       path: '/wired-elements',
