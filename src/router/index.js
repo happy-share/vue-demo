@@ -12,6 +12,7 @@ import PageMap from '@/pages/page-map'
 import PageAmap from '@/pages/page-amap'
 import WiredElements from '@/pages/wired-elements'
 import GithubTrending from '@/pages/github-trending'
+import TestAmap from '@/pages/test-amap'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/amap',
       name: 'amap',
       component: PageAmap
+    },
+    {
+      path: '/test-amap',
+      name: 'test-amap',
+      component: TestAmap
     },
     {
       path: '/wired-elements',

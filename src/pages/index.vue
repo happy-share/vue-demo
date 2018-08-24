@@ -4,6 +4,11 @@
     <wired-listbox horizontal v-for="(item, index) in pages" :key="index">
       <wired-item :value="item.name" :text="item.name" v-on:click="jump(item.path)"></wired-item>
     </wired-listbox> -->
+    <div class="menu">
+      <ul>
+        <li v-for="(item, index) in pages" :key="index"><a href="#" v-on:click="jump(item.path)">{{item.name}}</a></li>
+      </ul>
+    </div>
     <h1 @click="handle">click</h1>
     <debounce-search/>
     <tool-countdown
@@ -82,3 +87,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .menu {
+    width: 20%
+  }
+</style>
+
