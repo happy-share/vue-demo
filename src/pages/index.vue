@@ -22,6 +22,10 @@
     <test-list
       :list=list
     ></test-list>
+    <div>
+      {{result}}
+    </div>
+    <button @click="test">test</button>
   </div>
 </template>
 <script>
@@ -43,7 +47,8 @@ export default {
       countdown: 10,
       numStyle: 'width: 48rpx; font-size: 28rpx; color: #ffffff; background: #000; text-align: center; border-radius: 8rpx; padding: 5rpx 0;',
       symbolStyle: 'font-size: 28rpx; color: #000; padding: 0 12rpx;',
-      list: [1, 2, 3, 4, 5, 6, 7]
+      list: [1, 2, 3, 4, 5, 6, 7],
+      result: {}
     }
   },
   computed: {
@@ -57,6 +62,11 @@ export default {
     TestList
   },
   methods: {
+    test () {
+      Vue.set(this.result, 'hello', this.list)
+      // this.list.concat([99, 98])
+      Array.push.apply(this.list, [99, 98])
+    },
     countStart (e) {
       console.log('======> 开始倒计时,', e)
     },

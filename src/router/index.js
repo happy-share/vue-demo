@@ -13,6 +13,8 @@ import PageAmap from '@/pages/page-amap'
 import WiredElements from '@/pages/wired-elements'
 import GithubTrending from '@/pages/github-trending'
 import TestAmap from '@/pages/test-amap'
+import TestLunarCalendar from '@/pages/test-lunar-calendar'
+import TestUi from '@/pages/test-ui'
 
 Vue.use(Router)
 
@@ -77,6 +79,16 @@ export default new Router({
       path: '/jump/b',
       name: 'JumpB',
       component: SimpleComponent
+    },
+    {
+      path: '/test-lunar-calendar',
+      name: 'TestLunarCalendar',
+      component: TestLunarCalendar
+    },
+    {
+      path: '/test-ui',
+      name: 'TestUi',
+      component: TestUi
     }
   ]
 })

@@ -29,7 +29,7 @@ export default {
         groundimages: [
           {
             url: '//faas.elemecdn.com/desktop/media/img/appqc.95e532.png',
-            bounds: [[121.5273285, 31.21515044], [122.9273285, 32.31515044]],
+            bounds: [[121.5273285, 31.21515044], [122.9273285, 3.31515044]],
             events: {
               click () {
                 alert('click groundimage')
@@ -100,7 +100,7 @@ export default {
     },
     mounted () {
     }
-  
+
   }
 </script>
 
